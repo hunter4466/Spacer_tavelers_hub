@@ -1,0 +1,8 @@
+@mixin flexBox ($direction : row) {
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin resize ($width,$height) {
+  width: $width;
+  height: $height;
+}
