@@ -5,7 +5,7 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import Header from './components/header';
+import Header from './components/Header';
 import MissionComponent from './components/mission';
 import RocketComponent from './components/rocket';
 
