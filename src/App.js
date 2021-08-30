@@ -3,21 +3,19 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect,
 } from 'react-router-dom';
-
+import Header from './components/Header';
 
 const App = () => (
   <Router>
-    <div className="main_container">
-      <ul className="nav-bar">
-        <li className="list nav-bar-links">
-        </li>
-      </ul>
+    <div className="">
+      <Header />
       <Switch>
         <Route exact path="/">
-          <Redirect to="/books" />
+          <Redirect to="/rocket" />
+          <Redirect to="/mission" />
+          <Redirect to="/profile" />
         </Route>
       </Switch>
     </div>
