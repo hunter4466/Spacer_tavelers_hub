@@ -1,5 +1,6 @@
 @import "./modules/removers";
 @import "./modules/wrappers";
+@import "./modules/buttons";
 
 /* ------ fonts ----- */
 @font-face {
@@ -9,7 +10,7 @@
 
 @font-face {
   font-family: 'montserrat-regular';
-  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Slab:wght@700&display=swap');
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 }
 
 @font-face {
@@ -41,81 +42,41 @@
 /* --- end of fonts -- */
 
 body {
-  background-color: #f5f6fa;
   user-select: none;
 }
+/* --- Navigation Bar -- */
 
-.main_container {
-  margin-top: 6.313rem;
-  width: 87.5rem;
-  height: fit-content;
-  margin-left: 15.75rem;
-  background-color: #fafafa;
-  box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 11.75rem;
+/* --- Logo -- */
+.nav_bar_container {
+  @include flexBox(row);
+  padding-left: 2rem;
+}
+.logoflex {
+  @include flexBox(row);
+}
+.logo_img {
+  @include resize(5rem, 5rem);
+}
+.logo_title {
+  margin-left: 2rem;
 }
 
-.nav-bar {
-  @include flexBox;
-
-  width: 87.5rem;
-  height: 5.938rem;
-  margin-bottom: 2.375rem;
-  background-color: white;
-  padding-bottom: auto;
-  padding-top: auto;
-  padding-left: 0;
+/* --- Navigation Links -- */
+.nav_links {
+  position: absolute;
+  @include flexBox(row);
+  right: 5rem;
+  margin-top: 2rem;
 }
-
-.list {
-  @include removeDec;
-
-  margin-left: 2.938rem;
-  height: 5.938rem;
+.navLinkWrapper {
+  list-style: none;
+  padding-left: 2rem;
 }
-
-.nav-bar-links {
-  height: 50px;
-  padding-top: 2rem;
+.navLink {
+  @include bgLessBtn;
+  text-decoration: none;
 }
-
-.main_title {
-  @include remMarg;
-
-  font-size: 1.875rem;
-  color: #0290ff;
+.selected_link {
+  @include regBtn (20rem, 5rem);
 }
-
-.link_route {
-  letter-spacing: 1.9px;
-  font-size: 0.813rem;
-  height: 1rem;
-  color: black;
-  margin-top: 1rem;
-  opacity: 50%;
-
-  @include removeDec;
-
-  transition: ease-in-out 0.2s;
-}
-
-.link_route:hover {
-  opacity: 100%;
-}
-
-.link_route_cont {
-  transition: ease-in-out 0.2s;
-}
-
-.link_route_cont:hover {
-  transform: scale(1.5);
-}
-
-.user_icon_cont {
-  margin-left: 47rem;
-}
-
-.user_icon {
-  width: 2.813rem;
-  height: 2.813rem;
-}
+/* --- End of Navigation Bar -- */

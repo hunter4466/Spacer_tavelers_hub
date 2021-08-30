@@ -5,7 +5,9 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import Header from './components/Header';
+import Header from './components/header';
+import MissionComponent from './components/mission';
+import RocketComponent from './components/rocket';
 
 const App = () => (
   <Router>
@@ -14,8 +16,15 @@ const App = () => (
       <Switch>
         <Route exact path="/">
           <Redirect to="/rocket" />
-          <Redirect to="/mission" />
-          <Redirect to="/profile" />
+        </Route>
+        <Route path="/rocket">
+          <RocketComponent />
+        </Route>
+        <Route path="/mission">
+          <MissionComponent />
+        </Route>
+        <Route path="/profile">
+          Profile
         </Route>
       </Switch>
     </div>

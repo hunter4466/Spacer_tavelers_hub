@@ -1,13 +1,15 @@
-/* import {
+import {
   createStore, compose, combineReducers, applyMiddleware,
 } from 'redux';
 import logger from 'redux-logger';
-import { booksReducer } from './books/books';
+import rocketReducer from './rocket/rocket';
+import missionReducer from './mission/mission';
 
 const reducer = combineReducers({
-  booksReducer,
+  rocketReducer,
+  missionReducer,
 });
-
+/*
 const postBookMiddleware = () => (next) => (action) => {
   if (action.type === 'redux/books/ADD_BOOK') {
     fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/IdvgzwEjGRTOM81F7XDt/books',
@@ -25,23 +27,10 @@ const postBookMiddleware = () => (next) => (action) => {
   }
   next(action);
 };
-
-const removeBooksMiddleware = () => (next) => (action) => {
-  if (action.type === 'redux/books/REMOVE_BOOK') {
-    fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/IdvgzwEjGRTOM81F7XDt/books/${action.id}`,
-      {
-        method: 'DELETE',
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      });
-  }
-  next(action);
-};
+*/
 
 const composedEnhancer = compose(
-  applyMiddleware(postBookMiddleware),
-  applyMiddleware(removeBooksMiddleware),
+/* applyMiddleware(postBookMiddleware), */
   applyMiddleware(logger),
 );
 
@@ -52,4 +41,3 @@ const store = createStore(
 );
 
 export default store;
-*/
