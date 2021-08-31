@@ -1,0 +1,40 @@
+@import "./modules/removers";
+@import "./modules/wrappers";
+
+.profile-section-container {
+  @include flexBox;
+
+  justify-content: space-evenly;
+  box-shadow: 20px 20px 30px 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  height: 70vh;
+  padding-top: 30px;
+  margin: 2rem auto;
+  border-radius: 3px;
+  border: 1px solid rgb(204, 203, 203);
+}
+
+.profile-container {
+  width: 45%;
+}
+
+.profile-title {
+  font-size: 22px;
+  text-align: left;
+}
+
+.profile-table {
+  margin-top: 10px;
+  border: 1px solid #aaa;
+}
+
+.profile-table-none {
+  border: none;
+}
+
+.profile-list {
+  @include removeDec;
+
+  padding: 12px;
+  border-bottom: 1px solid #aaa;
+}
