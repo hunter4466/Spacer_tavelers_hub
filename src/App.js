@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header';
 import MissionComponent from './components/mission';
+import ProfileComponent from './components/profile';
 import RocketComponent from './components/rocket';
 
 const App = () => (
@@ -24,7 +25,7 @@ const App = () => (
           <MissionComponent />
         </Route>
         <Route path="/profile">
-          Profile
+          <ProfileComponent />
         </Route>
       </Switch>
     </div>
