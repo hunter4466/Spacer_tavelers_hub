@@ -1,14 +1,10 @@
-import { React, useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import store from '../redux/configureStore';
+import { React, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { retrieveInfo, updateState } from '../redux/mission/mission';
 
 const MissionComponent = () => {
   const dispatch = useDispatch();
-  const [missionData, updateMissionData] = useState([]);
-  const updateData = () => {
-    updateMissionData(store.getState().missionReducer);
-  };
+  const missionData = useSelector((state) => state.missionReducer);
   useEffect(() => {
     dispatch(retrieveInfo([]));
   }, []);
@@ -27,7 +23,6 @@ const MissionComponent = () => {
     }
   };
 
-  store.subscribe(updateData);
   return (
     <div>
       {missionData.map((data) => (
