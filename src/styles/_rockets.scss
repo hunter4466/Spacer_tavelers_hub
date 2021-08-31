@@ -1,12 +1,6 @@
 @import "./modules/buttons";
 @import "./modules/wrappers";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .rocket-section-container {
   width: 100%;
   margin: 2rem;
@@ -57,4 +51,10 @@
   @include regBtn(9rem, 3rem, true);
 
   font-size: 12px;
+}
+
+.reserve-rocket {
+  @include regInput(3rem, 11rem);
+
+  box-shadow: 1px 1px 1px 1px;
 }

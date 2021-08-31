@@ -34,7 +34,7 @@ const RocketComponent = () => {
               {data.rocket_status ? <span className="rocket-description-reserved roboto-bold">Reserved</span> : <span />}
               {data.description}
             </p>
-            <div><button onClick={() => { handleRocketStateClick(data.rocket_id, data.rocket_status); }} className={data.rocket_status ? 'rocket-description-button' : 'rocket-description-button'} type="button">{data.rocket_status ? 'Cancel Reservation' : 'Reserve Rocket'}</button></div>
+            <div><button onClick={() => { handleRocketStateClick(data.rocket_id, data.rocket_status); }} className={data.rocket_status ? 'reserve-rocket' : 'rocket-description-button'} type="button">{data.rocket_status ? 'Cancel Reservation' : 'Reserve Rocket'}</button></div>
           </div>
         </div>
       ))}
