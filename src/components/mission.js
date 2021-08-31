@@ -20,7 +20,7 @@ const MissionComponent = () => {
         <div key={data.mission_id}>
           <div>{data.mission_name}</div>
           <div>{data.description}</div>
-          <div>Status</div>
+          <div><div>Status</div></div>
           <div><button type="button" id="member_btn">Join Mission</button></div>
         </div>
       ))}
