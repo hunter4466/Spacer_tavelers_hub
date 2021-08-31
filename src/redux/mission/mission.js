@@ -63,18 +63,10 @@ const getMissionsMiddleware = (store) => (next) => (action) => {
   next(action);
 };
 
-const updMissStateMiddleware = (store) => (next) => (action) => {
-  if (action.type === UPDATE_FROM_API) {
-    store.dispatch(updateState(false, false));
-  }
-  next(action);
-};
-
 export {
   missionReducer,
   retrieveInfo,
   loadFromAPI,
   getMissionsMiddleware,
-  updMissStateMiddleware,
   updateState,
 };

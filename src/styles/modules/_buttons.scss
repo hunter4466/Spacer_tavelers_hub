@@ -5,6 +5,7 @@
   background-color: white;
   padding: 0;
   width: fit-content;
+  width: -moz-fit-content;
   transition: ease-in-out, 0.2s;
 
   &:hover {
@@ -13,7 +14,7 @@
   }
 }
 
-@mixin regBtn ($width, $height, $hover) {
+@mixin regBtn($width, $height, $hover) {
   width: $width;
   height: $height;
   background-color: #0290ff;
@@ -34,7 +35,7 @@
   }
 }
 
-@mixin regInput ($height, $width) {
+@mixin regInput($height, $width) {
   color: rgb(102, 102, 102);
   width: $width;
   height: $height;
