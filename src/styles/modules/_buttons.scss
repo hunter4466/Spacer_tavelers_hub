@@ -13,7 +13,7 @@
   }
 }
 
-@mixin regBtn ($width, $height) {
+@mixin regBtn ($width, $height, $hover) {
   width: $width;
   height: $height;
   background-color: #0290ff;
@@ -25,10 +25,12 @@
   border-width: 1px;
   padding: 0.5rem 1rem 0.5rem 1rem;
 
-  &:hover {
-    background-color: white;
-    border-color: #0290ff;
-    color: #0290ff;
+  @if $hover {
+    &:hover {
+      background-color: white;
+      border-color: #0290ff;
+      color: #0290ff;
+    }
   }
 }
 

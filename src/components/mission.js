@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import store from '../redux/configureStore';
-import { retrieveInfo } from '../redux/mission/mission';
+import { retrieveInfo, updateState } from '../redux/mission/mission';
 
 const MissionComponent = () => {
   const dispatch = useDispatch();
@@ -13,6 +13,33 @@ const MissionComponent = () => {
     dispatch(retrieveInfo([]));
   }, []);
 
+  const handleMissionStateClick = (key, status) => {
+    if (status) {
+      dispatch(updateState({
+        id: key,
+        value: false,
+      }));
+    } else {
+      dispatch(updateState({
+        id: key,
+        value: true,
+      }));
+    }
+  };
+
+  const retrieveStatus = (data) => {
+    if (data.mission_status) {
+      return 'Active Member';
+    }
+    return 'NOT A MEMBER';
+  };
+  const retrieveBtnStatus = (data) => {
+    if (data.mission_status) {
+      return 'Leave Mission';
+    }
+    return 'Join Mission';
+  };
+
   store.subscribe(updateData);
   return (
     <div>
@@ -20,8 +47,8 @@ const MissionComponent = () => {
         <div key={data.mission_id}>
           <div>{data.mission_name}</div>
           <div>{data.description}</div>
-          <div><div>Status</div></div>
-          <div><button type="button" id="member_btn">Join Mission</button></div>
+          <div><div>{ retrieveStatus(data) }</div></div>
+          <div><button onClick={() => { handleMissionStateClick(data.mission_id, data.mission_status); }} type="button" id="member_btn">{ retrieveBtnStatus(data) }</button></div>
         </div>
       ))}
     </div>
