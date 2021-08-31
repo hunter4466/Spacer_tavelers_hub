@@ -44,19 +44,24 @@
 body {
   user-select: none;
 }
+
 /* --- Navigation Bar -- */
 
 /* --- Logo -- */
 .nav_bar_container {
   @include flexBox(row);
+
   padding-left: 2rem;
 }
+
 .logoflex {
   @include flexBox(row);
 }
+
 .logo_img {
   @include resize(5rem, 5rem);
 }
+
 .logo_title {
   margin-left: 2rem;
 }
@@ -64,19 +69,26 @@ body {
 /* --- Navigation Links -- */
 .nav_links {
   position: absolute;
+
   @include flexBox(row);
+
   right: 5rem;
   margin-top: 2rem;
 }
+
 .navLinkWrapper {
   list-style: none;
   padding-left: 2rem;
 }
+
 .navLink {
   @include bgLessBtn;
+
   text-decoration: none;
 }
+
 .selected_link {
-  @include regBtn (20rem, 5rem);
+  @include regBtn (20rem, 4rem, false);
 }
-/* --- End of Navigation Bar -- */
+
+/* --- End of Navigation Bar --- */
