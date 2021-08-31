@@ -68,6 +68,7 @@ body {
 
 .logo_img {
   margin-top: 0.5rem;
+
   @include resize(5rem, 5rem);
 }
 
