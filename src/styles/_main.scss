@@ -67,10 +67,12 @@ body {
 }
 
 .logo_img {
+  margin-top: 0.5rem;
   @include resize(5rem, 5rem);
 }
 
 .logo_title {
+  margin-top: 1.5rem;
   margin-left: 2rem;
 }
 
