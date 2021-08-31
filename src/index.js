@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './styles/_main.scss';
 import './styles/_mision.scss';
+import './styles/_profile.scss';
 import './styles/_rockets.scss';
 import store from './redux/configureStore';
 
