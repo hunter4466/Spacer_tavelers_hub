@@ -2,8 +2,8 @@ import {
   createStore, compose, combineReducers, applyMiddleware,
 } from 'redux';
 import logger from 'redux-logger';
-import rocketReducer from './rocket/rocket';
-import { missionReducer, getMissionsMiddleware, updMissStateMiddleware } from './mission/mission';
+import { rocketReducer, getRocketMiddleware } from './rocket/rocket';
+import { missionReducer, getMissionsMiddleware } from './mission/mission';
 
 const reducer = combineReducers({
   rocketReducer,
@@ -12,7 +12,7 @@ const reducer = combineReducers({
 
 const composedEnhancer = compose(
   applyMiddleware(getMissionsMiddleware),
-  applyMiddleware(updMissStateMiddleware),
+  applyMiddleware(getRocketMiddleware),
   applyMiddleware(logger),
 );
 
