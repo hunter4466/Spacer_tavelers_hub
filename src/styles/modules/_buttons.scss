@@ -57,3 +57,33 @@
   height: 40px;
   width: 20px;
 }
+
+@mixin member_tag($color, $padding) {
+  height: 1.5rem;
+  width: 7rem;
+  background-color: $color;
+  border-radius: 3px;
+  border-color: transparent;
+  color: white;
+  font-size: 0.8rem;
+  padding-top: 0.3rem;
+  padding-left: $padding;
+  margin-left: 0.8rem;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin member_btn($color) {
+  height: 1.5rem;
+  width: 7rem;
+  color: $color;
+  border: 1px solid $color;
+  border-radius: 3px;
+  margin-left: 0.8rem;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

@@ -1,2 +1,43 @@
 @import "./modules/removers";
 @import "./modules/wrappers";
+@import "./modules/buttons";
+
+.mission_wrapper {
+    display: grid;
+    grid-template-columns: 10% 64% 13% 13%;
+    margin: 0rem 1rem 0rem 1rem;
+}
+.title_item {
+    margin-top: 3rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1.5rem;
+    @include gridBorder;
+}
+.mission_item {
+    @include gridBorder;
+}
+.mission_item p {
+    margin-left: 0.8rem;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.mission_item_text {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    @include gridBorder;
+    font-size: 0.8rem;
+}
+.active_member_btn {
+    @include member_btn(red);
+}
+.not_member_btn {
+    @include member_btn(gray);
+}
+.active_member {
+    @include member_tag(#0290ff, 0.75rem);
+}
+.not_member {
+    @include member_tag(gray, 0.45rem);
+}

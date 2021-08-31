@@ -8,7 +8,7 @@ const ProfileComponent = () => {
   const rocketData = useSelector((state) => state.rocketReducer);
   const filteredMissionData = missionData.filter((item) => item.mission_status === true);
   const filteredRocketData = rocketData.filter((item) => item.rocket_status === true);
- 
+
   console.log(missionData);
   console.log(rocketData);
   console.log(filteredMissionData);
