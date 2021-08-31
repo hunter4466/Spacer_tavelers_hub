@@ -27,19 +27,6 @@ const MissionComponent = () => {
     }
   };
 
-  const retrieveStatus = (data) => {
-    if (data.mission_status) {
-      return 'Active Member';
-    }
-    return 'NOT A MEMBER';
-  };
-  const retrieveBtnStatus = (data) => {
-    if (data.mission_status) {
-      return 'Leave Mission';
-    }
-    return 'Join Mission';
-  };
-
   store.subscribe(updateData);
   return (
     <div>
@@ -47,8 +34,8 @@ const MissionComponent = () => {
         <div key={data.mission_id}>
           <div>{data.mission_name}</div>
           <div>{data.description}</div>
-          <div><div>{ retrieveStatus(data) }</div></div>
-          <div><button onClick={() => { handleMissionStateClick(data.mission_id, data.mission_status); }} type="button" id="member_btn">{ retrieveBtnStatus(data) }</button></div>
+          <div><div>{data.mission_status ? 'Active Member' : 'NOT A MEMBER'}</div></div>
+          <div><button onClick={() => { handleMissionStateClick(data.mission_id, data.mission_status); }} type="button" id="member_btn">{data.mission_status ? 'Leave Mission' : 'Join Mission'}</button></div>
         </div>
       ))}
     </div>
