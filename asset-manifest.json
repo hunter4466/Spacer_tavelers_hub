@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Spacer_tavelers_hub/static/css/main.7b1771a1.chunk.css",
-    "main.js": "/Spacer_tavelers_hub/static/js/main.dd7d8cd5.chunk.js",
-    "main.js.map": "/Spacer_tavelers_hub/static/js/main.dd7d8cd5.chunk.js.map",
-    "runtime-main.js": "/Spacer_tavelers_hub/static/js/runtime-main.585a3151.js",
-    "runtime-main.js.map": "/Spacer_tavelers_hub/static/js/runtime-main.585a3151.js.map",
-    "static/js/2.17c18a2d.chunk.js": "/Spacer_tavelers_hub/static/js/2.17c18a2d.chunk.js",
-    "static/js/2.17c18a2d.chunk.js.map": "/Spacer_tavelers_hub/static/js/2.17c18a2d.chunk.js.map",
-    "index.html": "/Spacer_tavelers_hub/index.html",
-    "static/css/main.7b1771a1.chunk.css.map": "/Spacer_tavelers_hub/static/css/main.7b1771a1.chunk.css.map",
-    "static/js/2.17c18a2d.chunk.js.LICENSE.txt": "/Spacer_tavelers_hub/static/js/2.17c18a2d.chunk.js.LICENSE.txt",
-    "static/media/planet.a63017b2.svg": "/Spacer_tavelers_hub/static/media/planet.a63017b2.svg"
+    "main.css": "./static/css/main.7b1771a1.chunk.css",
+    "main.js": "./static/js/main.dd7d8cd5.chunk.js",
+    "main.js.map": "./static/js/main.dd7d8cd5.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.3279c0a1.js",
+    "runtime-main.js.map": "./static/js/runtime-main.3279c0a1.js.map",
+    "static/js/2.17c18a2d.chunk.js": "./static/js/2.17c18a2d.chunk.js",
+    "static/js/2.17c18a2d.chunk.js.map": "./static/js/2.17c18a2d.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.7b1771a1.chunk.css.map": "./static/css/main.7b1771a1.chunk.css.map",
+    "static/js/2.17c18a2d.chunk.js.LICENSE.txt": "./static/js/2.17c18a2d.chunk.js.LICENSE.txt",
+    "static/media/planet.a63017b2.svg": "./static/media/planet.a63017b2.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.585a3151.js",
+    "static/js/runtime-main.3279c0a1.js",
     "static/js/2.17c18a2d.chunk.js",
     "static/css/main.7b1771a1.chunk.css",
     "static/js/main.dd7d8cd5.chunk.js"
