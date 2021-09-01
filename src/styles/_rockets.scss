@@ -1,0 +1,60 @@
+@import "./modules/buttons";
+@import "./modules/wrappers";
+
+.rocket-section-container {
+  width: 100%;
+  margin: 2rem;
+}
+
+.rocket-container {
+  width: 90%;
+  margin: 0 auto 20px;
+
+  @include flexBox;
+
+  justify-content: space-between;
+}
+
+.rocket-description-reserved {
+  font-size: 12px;
+  background-color: cadetblue;
+  color: white;
+  border-radius: 3px;
+  padding: 2px;
+  margin-right: 3px;
+}
+
+.rocket-image {
+  @include resize(16rem, 13rem);
+}
+
+.rocket-description-container {
+  margin-left: 30px;
+
+  @include flexBox(column);
+}
+
+.rocket-description-name {
+  font-weight: 700;
+}
+
+.rocket-description-name,
+.rocket-description {
+  margin: 10px 0;
+}
+
+.rocket-description {
+  letter-spacing: 0.6px;
+}
+
+.rocket-description-button {
+  @include regBtn(9rem, 3rem, true);
+
+  font-size: 12px;
+}
+
+.reserve-rocket {
+  @include regInput(3rem, 11rem);
+
+  box-shadow: 1px 1px 1px 1px;
+}
