@@ -26,7 +26,7 @@ Run:
 
 Get a live preview of the project on this link  
 
-- Link: [Live-Preview](https://flamboyant-nightingale-e6d45f.netlify.app/rocket)
+- Link: [Live-Preview](https://flamboyant-nightingale-e6d45f.netlify.app)
 
 ## Authors 
 
