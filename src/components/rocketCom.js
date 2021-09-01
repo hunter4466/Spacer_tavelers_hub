@@ -9,18 +9,8 @@ const RocketComponent = () => {
     dispatch(getInformation([]));
   }, []);
 
-  const handleRocketStateClick = (key, status) => {
-    if (status) {
-      dispatch(setReservationState({
-        id: key,
-        value: false,
-      }));
-    } else {
-      dispatch(setReservationState({
-        id: key,
-        value: true,
-      }));
-    }
+  const handleRocketStateClick = (key) => {
+    dispatch(setReservationState(key));
   };
 
   return (
@@ -34,7 +24,7 @@ const RocketComponent = () => {
               {data.rocket_status ? <span className="rocket-description-reserved roboto-bold">Reserved</span> : <span />}
               {data.description}
             </p>
-            <div><button onClick={() => { handleRocketStateClick(data.rocket_id, data.rocket_status); }} className={data.rocket_status ? 'reserve-rocket' : 'rocket-description-button'} type="button">{data.rocket_status ? 'Cancel Reservation' : 'Reserve Rocket'}</button></div>
+            <div><button onClick={() => { handleRocketStateClick(data.rocket_id); }} className={data.rocket_status ? 'reserve-rocket' : 'rocket-description-button'} type="button">{data.rocket_status ? 'Cancel Reservation' : 'Reserve Rocket'}</button></div>
           </div>
         </div>
       ))}

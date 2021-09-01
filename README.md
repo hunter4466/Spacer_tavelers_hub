@@ -26,7 +26,7 @@ Run:
 
 Get a live preview of the project on this link  
 
-- Link: [Live-Preview](https://hunter4466.github.io/Spacer_tavelers_hub/build/index.html)
+- Link: [Live-Preview](https://flamboyant-nightingale-e6d45f.netlify.app/rocket)
 
 ## Authors 
 

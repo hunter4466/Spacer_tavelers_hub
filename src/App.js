@@ -5,10 +5,14 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import Header from './components/Header';
-import MissionComponent from './components/mission';
-import ProfileComponent from './components/profile';
-import RocketComponent from './components/rocket';
+import Header from './components/HeaderCom';
+import './styles/_main.scss';
+import './styles/_mision.scss';
+import './styles/_profile.scss';
+import './styles/_rockets.scss';
+import MissionComponent from './components/missionCom';
+import ProfileComponent from './components/profileCom';
+import RocketComponent from './components/rocketCom';
 
 const App = () => (
   <Router>

@@ -22,12 +22,13 @@ const rocketReducer = (state = initialState, action) => {
   const stateHolder = state;
   const stateArray = [];
   const logic = (item) => {
-    if (item.rocket_id === action.payload.id) {
-      return action.payload.value;
-    } if (item.rocket_status) {
+    if (item.rocket_id === action.payload) {
+      if (item.rocket_status) {
+        return false;
+      }
       return true;
     }
-    return false;
+    return item.rocket_status;
   };
   switch (action.type) {
     case GET_INFO:

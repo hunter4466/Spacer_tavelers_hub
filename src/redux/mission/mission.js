@@ -22,12 +22,13 @@ const missionReducer = (state = initialState, action) => {
   const stateHolder = state;
   const stateArray = [];
   const logic = (item) => {
-    if (item.mission_id === action.payload.id) {
-      return action.payload.value;
-    } if (item.mission_status) {
+    if (item.mission_id === action.payload) {
+      if (item.mission_status) {
+        return false;
+      }
       return true;
     }
-    return false;
+    return item.mission_status;
   };
   switch (action.type) {
     case UPDATE_ALL:
